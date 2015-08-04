@@ -52,8 +52,9 @@
 <script> 
 
 	var data = ["&#1F344;","mushroom","&#1F345;","tomato","&#1F346;","aubergine","&#1F347;","grapes","&#1F348;","melon","&#1F349;","watermelon","&#34A;","tangerine","&#1F34C;","banana","&#1F34D;","pineapple","&#1F34E;","red apple","&#1F34F;","green apple","&#1F351;","peach","&#1F352;","cherries","&#1F353;","strawberry","&#354;","hamburger","&#355;","slice of pizza","&#1F356;","meat on bone","&#1F357;","poultry leg","&#1F358;","rice cracker","&#359;","rice ball","&#1F35A;","cooked rice","&#1F35B;","curry and rice","&#1F35C;","steaming bowl","&#1F35D;","spaghetti","&#1F35E;","bread","&#1F35F;","french fries","&#1F360;","roasted sweet potato","&#1F361;","dango","&#1F362;","oden","&#1F363;","sushi","&#1F364;","fried shrimp","&#365;","fish cake with swirl design","&#1F366;","soft ice cream","&#1F367;","shaved ice","&#1F368;","ice cream","&#1F369;","doughnut","&#1F36A;","cookie","&#1F36B;","chocolate bar","&#1F36C;","candy","&#1F36D;","lollipop","&#1F36E;","custard","&#1F36F;","honey bear"] ;
-	
-	$("#inputSource").keyup(function(){
+
+	$("#inputSource").keyup(function(e){
+		alert(e.which);
 	var a = $("#inputSource").val();
 	$("#targetSpan").html(wordToEmoji(a));
 	});
