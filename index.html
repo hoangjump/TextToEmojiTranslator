@@ -55,13 +55,18 @@
 
 
 
-var hash = window.location.hash;
-setInterval(function(){
-    if (window.location.hash != hash) {
-        hash = window.location.hash;
-        alert("User went back or forward to application state represented by " + hash);
-    }
-}, 100);
+function init() {
+    document.addEventListener("deviceready", onDR, false);
+}
+function onDR(){
+    BackButton.override(); 
+    document.addEventListener("backKeyDown", backKeyDown, true);
+    //boot your app...
+}
+function backKeyDown() { 
+    // do something here if you wish
+    alert('go back!');
+}
 
 
 	$("#inputSource").keyup(function(e){
